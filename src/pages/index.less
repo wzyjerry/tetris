@@ -1,0 +1,58 @@
+.content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  .tetris {
+    margin: 24px;
+    height: 1032px;
+    width: 100%;
+    background-color: pink;
+    :global {
+      .board,
+      .next{
+        .box {
+          .square {
+            visibility: hidden;
+          }
+        }
+        .box.fill {
+          &.I>.square {
+            visibility: visible;
+            fill: hsl(185, 100%, 50%);
+          }
+          &.J>.square {
+            visibility: visible;
+            fill: hsl(240, 100%, 50%);
+          }
+          &.L>.square {
+            visibility: visible;
+            fill: hsl(35, 100%, 50%);
+          }
+          &.O>.square {
+            visibility: visible;
+            fill: hsl(55, 100%, 50%);
+          }
+          &.S>.square {
+            visibility: visible;
+            fill: hsl(120, 100%, 50%);
+          }
+          &.T>.square {
+            visibility: visible;
+            fill: hsl(300, 100%, 50%);
+          }
+          &.Z>.square {
+            visibility: visible;
+            fill: hsl(0, 100%, 50%);
+          }
+        }
+      }
+      .score {
+        font-size: 24px;
+        font-weight: bold;
+        .hint {
+          fill: hsl(270, 100%, 50%);
+        }
+      }
+    }
+  }
+}
